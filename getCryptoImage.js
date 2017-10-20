@@ -1,8 +1,8 @@
-const download = require('image-downloader')
-const CoinMarketCap = require('coinmarketcap-api')
+const download = require('image-downloader');
+const CoinMarketCap = require('coinmarketcap-api');
 var fs = require('fs');
 
-const client = new CoinMarketCap()
+const client = new CoinMarketCap();
 
 client.getTicker({ limit: 0 }).then(result => {
 
@@ -14,19 +14,19 @@ client.getTicker({ limit: 0 }).then(result => {
         }
 
         if (fs.existsSync(options.dest)){
-            console.log('File already exist', item.id)
+            console.log('File already exist', item.id);
         }else{
             download.image(options)
             .then(({ filename, image }) => {
-                console.log('File saved to', filename)
+                console.log('File saved to', filename);
             }).catch((err) => {
                throw err;
-            })
-        }
+            });
+        };
 
-    })
+    });
 
     console.log("you should have around " + result.length + " images");
 
-}).catch(console.error)
+}).catch(console.error);
 
