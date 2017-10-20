@@ -1,6 +1,6 @@
 const download = require('image-downloader');
 const CoinMarketCap = require('coinmarketcap-api');
-var fs = require('fs');
+const fs = require('fs');
 
 const client = new CoinMarketCap();
 
