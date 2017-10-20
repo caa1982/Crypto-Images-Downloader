@@ -1,0 +1,16 @@
+{
+  "name": "crypto_img_downloader",
+  "version": "1.0.0",
+  "description": "download all crypto images from coinmarketcap",
+  "main": "node getCryptoImage.js",
+  "scripts": {
+    "start": "node getCryptoImage.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "coinmarketcap-api": "^1.0.0",
+    "image-downloader": "^3.3.0"
+  }
+}
