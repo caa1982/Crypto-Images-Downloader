@@ -7,7 +7,7 @@
 ### Install
 
 1. npm install
-2. open getCryptoImage.js and change path (destination) 
+2. open config.js and change path (destination of images) and resoultion 
 
 ### RUN
 
