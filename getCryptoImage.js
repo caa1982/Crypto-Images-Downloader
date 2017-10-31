@@ -1,6 +1,7 @@
 const download = require('image-downloader');
 const CoinMarketCap = require('coinmarketcap-api');
 const fs = require('fs');
+const config = require('./config');
 
 const client = new CoinMarketCap();
 
@@ -9,8 +10,8 @@ client.getTicker({ limit: 0 }).then(result => {
     result.forEach(item => {
 
         let options = {
-            url: `https://files.coinmarketcap.com/static/img/coins/128x128/${item.id}.png`, // You can change the image resolution from 16x16, 32x32, 64x63 or 128x128
-            dest: `path/${item.id}.png` // Change path (destination of the download)
+            url: `https://files.coinmarketcap.com/static/img/coins/${config.resolution}/${item.id}.png`, 
+            dest: `${config.path}/${item.id}.png` 
         }
 
         if (fs.existsSync(options.dest)){
